@@ -1,8 +1,8 @@
-﻿namespace ExaminationSystem.Models.Enums
+namespace ExaminationSystem.Models.Enums
 {
     public enum ExamType
     {
-        Quiz,
-        Final
+        Quiz = 1,
+        Final = 2
     }
-}
+} 

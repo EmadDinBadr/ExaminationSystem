@@ -10,13 +10,13 @@ namespace ExaminationSystem.Repositories
         ExamRepository _examRepository;  
         public CourseRepository()
         {
-            _context = new EXContext();
+            //_context = new EXContext();
             _examRepository = new ExamRepository(); 
         }
 
         public void AssignExamToCourse(Exam exam)
         {
-           bool res = _examRepository.IsExamExist(exam.Id);
+           bool res = _examRepository.IsExamExist(exam.ID);
             if(res)
             {
 

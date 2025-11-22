@@ -1,11 +1,11 @@
-﻿namespace ExaminationSystem.Models
+namespace ExaminationSystem.Models
 {
-    public class ExamQuestion: BaseEntity
+    public class ExamQuestion : BaseModel
     {
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
+        public Exam Exam { get; set; } = null!;
 
         public int QuestionId { get; set; }
-        public Question Question { get; set; }
+        public Question Question { get; set; } = null!;
     }
-}
+} 

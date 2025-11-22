@@ -1,11 +1,16 @@
-﻿namespace ExaminationSystem.Models
-{
-    public class Choice:BaseEntity
-    {
-        public int QuestionId { get; set; }
-        public Question Question { get; set; }
+using System.ComponentModel.DataAnnotations;
 
-        public string choiceBody { get; set; }
+namespace ExaminationSystem.Models
+{
+    public class Choice : BaseModel
+    {
+
+        [Required]
+        public string Text { get; set; } = null!;
+
         public bool IsCorrect { get; set; }
+
+        public int QuestionId { get; set; }
+        public Question Question { get; set; } = null!;
     }
-}
+} 

@@ -1,13 +1,11 @@
-﻿namespace ExaminationSystem.Models
+namespace ExaminationSystem.Models
 {
-    public class StudentCourse: BaseEntity
+    public class StudentCourse : BaseModel
     {
         public int StudentId { get; set; }
-        public Student Student { get; set; }
+        public Student Student { get; set; } = null!;
 
         public int CourseId { get; set; }
-        public Course Course { get; set; }
-
-        public DateTime EnrollmentDate { get; set; } = DateTime.Now;
+        public Course Course { get; set; } = null!;
     }
-}
+} 
